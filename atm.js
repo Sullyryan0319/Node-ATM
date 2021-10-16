@@ -18,19 +18,19 @@ const accountInfo = require('./account');
 
 // get balance
 
-let currentBalance = accountInfo.acctBal;
+let currentBalance;
 
 // deposit function
 
-function deposit(currentBalance, depositAmount){
-    let newBalance = currentBalance + depositAmount;
-    return newBalance;
+function deposit(depositAmount){
+     currentBalance = accountInfo.acctBal + depositAmount;
+    return currentBalance;
 }
 // withdraw function
 
-function withdraw(currentBalance, withdrawAmount){
-    let updatedBalance = currentBalance - withdrawAmount;
-    return updatedBalance;
+function withdraw(withdrawAmount){
+     currentBalance = accountInfo.acctBal - withdrawAmount;
+    return currentBalance;
 }
 
 module.exports.validate = validatePin;

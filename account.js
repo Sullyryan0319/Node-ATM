@@ -6,7 +6,7 @@ const pinNum = 6312;
 
 // account balance
 
-let acctBal = (777777);
+let acctBal = (2500);
 
 module.exports = {
     pinNum: pinNum,
