@@ -1,12 +1,11 @@
 {
-  "name": "Node-ATM",
+  "name": "node-atm",
   "version": "1.0.0",
   "description": "Build an ATM app using Node",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
-    
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Sullyryan0319/Node-ATM/issues"
   },
-  "homepage": "https://github.com/Sullyryan0319/Node-ATM#readme"
+  "homepage": "https://github.com/Sullyryan0319/Node-ATM#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }

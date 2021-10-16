@@ -1,4 +1,4 @@
-// Account file will only hold "pin number" and "account balance"
+// Account file will only hold "pin number", "account balance" and a formatter for currency
 
 // pin num
 
@@ -6,9 +6,9 @@ const pinNum = 6312;
 
 // account balance
 
-let acctBal = parseFloat("77,777.77");
+let acctBal = (777777);
 
 module.exports = {
-    pinNum: pinNumk,
+    pinNum: pinNum,
     acctBal: acctBal
-}
+}  

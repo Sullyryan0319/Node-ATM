@@ -1,26 +1,39 @@
 // atm file will contain functions for user interaction
 
+const accountInfo = require('./account');
+
+
 // validate pin
-function validatePin(account){
-    let userInput = prompt("Enter your 4 didgit pin.")
-    if(userInput === account.pin){
+
+ function validatePin(inputPin){
+     console.log(accountInfo.pinNum);
+     console.log(inputPin);
+    if(inputPin === accountInfo.pinNum){
         return true;
     }else{
-        alert("Incorrect pin, please re-enter.")
+        return false;
     }
+   
 }
-
 
 // get balance
-const balanceCheck = prompt("Would you like to check your account balance?");
-function getBalance(input){
-    if(input === "yes"){
-        alert(`Your current balance is ${acctBal}`);
-    }else{
 
-    }
+let currentBalance = accountInfo.acctBal;
 
-}
 // deposit function
 
+function deposit(currentBalance, depositAmount){
+    let newBalance = currentBalance + depositAmount;
+    return newBalance;
+}
 // withdraw function
+
+function withdraw(currentBalance, withdrawAmount){
+    let updatedBalance = currentBalance - withdrawAmount;
+    return updatedBalance;
+}
+
+module.exports.validate = validatePin;
+module.exports.balance = currentBalance;
+module.exports.addDeposit = deposit;
+module.exports.withdrawFunds = withdraw;
