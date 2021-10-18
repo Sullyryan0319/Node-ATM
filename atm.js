@@ -1,16 +1,19 @@
 // atm file will contain functions for user interaction
 
+const { acctBal } = require('./account');
 const accountInfo = require('./account');
 
 
 // validate pin
 
  function validatePin(inputPin){
-     console.log(accountInfo.pinNum);
-     console.log(inputPin);
-    if(inputPin === accountInfo.pinNum){
+
+
+    if(accountInfo.pinNum == inputPin){
         return true;
-    }else{
+    }
+    else {
+
         return false;
     }
    
@@ -18,19 +21,19 @@ const accountInfo = require('./account');
 
 // get balance
 
-let currentBalance;
+let currentBalance = acctBal;
 
 // deposit function
 
 function deposit(depositAmount){
-     currentBalance = accountInfo.acctBal + depositAmount;
-    return currentBalance;
+    accountInfo.acctBal = accountInfo.acctBal + depositAmount;
+    return accountInfo.acctBal;
 }
 // withdraw function
 
 function withdraw(withdrawAmount){
-     currentBalance = accountInfo.acctBal - withdrawAmount;
-    return currentBalance;
+    accountInfo.acctBal = accountInfo.acctBal - withdrawAmount;
+    return accountInfo.acctBal;
 }
 
 module.exports.validate = validatePin;

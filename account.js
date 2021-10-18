@@ -11,4 +11,4 @@ let acctBal = (2500);
 module.exports = {
     pinNum: pinNum,
     acctBal: acctBal
-}  
+}    
